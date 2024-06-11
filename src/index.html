@@ -37,16 +37,17 @@
         </div>
 
 
-        <p class="mt-4 sm:px-32 text-white sm:text-xl text-sm  tracking-tighter" data-aos="fade-down" data-aos-duration="500">
-        Muhammad Dhafin Ramadhan
+        <p class="mt-4 sm:px-32 text-white text-5xl" data-aos="fade-down" data-aos-duration="500">
+        Hello, Im
           </p>
 
-          <p class="sm:mt-8 mt-3 sm:px-44 text-white text-4xl sm:text-6xl font-semibold tracking-tighter" data-aos="fade-right" data-aos-duration="3000">
-           Im a <span class="underline leading-8 underline-offset-8	decoration-8 decoration-[#252ff9]"> Network Engineer,</span> 
-          </p>
-          <p class="sm:mt-8 mt-3 sm:px-44  text-white text-2xl sm:text-4xl font-semibold tracking-tighter"  data-aos="fade-left" data-aos-duration="3000">Web developer   and a           
-             <span class="underline leading-8 underline-offset-8	decoration-8 decoration-[#de3f3f]">  Pentester!</span> 
-          </p>
+          <div class="container mx-auto mt-4">
+            <div class=" text-white text-center">
+              <div class="text-4xl font-bold" id="typing-container">
+              </div>
+            </div>
+          </div>
+          
           <p class="sm:mt-8 mt-2.5 text-slate-400 sm:px-72  sm:leading-loose text-lg font-normal">
             Hey there! I'm a student at SMKN 4 Bandung, currently geeking out over            <span class="text-slate-100"> web development and cybersecurity. </span>I've been diving into this world for the past <span class="font-semibold">2 years</span> and I'm always on the hunt for new ways to up my skills. 
           </p>
@@ -251,13 +252,66 @@
                   }
                   
                   </style>
+                  
             </section>
+            <style>
+              body {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+              }
+              
+              .typing-container {
+                overflow: hidden;
+                border-right: .15em solid #000;
+                white-space: nowrap;
+              }
+              </style>
+              <script>
+                // JavaScript for Typing Effect
+                const texts = ["Muhammad Dhafin Ramadhan", "Network Engineer,", "Pentester!"];
+                const typingContainer = document.getElementById("typing-container");
+                let currentTextIndex = 0;
+                let currentText = "";
+                let isDeleting = false;
+                let typingSpeed = 54; // Adjust the typing speed (milliseconds per character)
+              
+                function type() {
+                  const text = texts[currentTextIndex];
+                  if (isDeleting) {
+                    currentText = text.substring(0, currentText.length - 1);
+                  } else {
+                    currentText = text.substring(0, currentText.length + 1);
+                  }
+              
+                  typingContainer.innerHTML = currentText;
+              
+                  let typingDelay = isDeleting ? typingSpeed / 3 : typingSpeed;
+              
+                  if (!isDeleting && currentText === text) {
+                    typingDelay = 1700; // Pause after typing
+                    isDeleting = true;
+                  } else if (isDeleting && currentText === "") {
+                    isDeleting = false;
+                    currentTextIndex++;
+                    if (currentTextIndex === texts.length) {
+                      currentTextIndex = 0;
+                    }
+                  }
+              
+                  setTimeout(type, typingDelay);
+                }
+              
+                document.addEventListener("DOMContentLoaded", function () {
+                  type();
+                });
+              </script>
             <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+  
 </section>
+
 </body>
 </html>
