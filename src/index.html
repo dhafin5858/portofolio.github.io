@@ -22,6 +22,9 @@
     .black_border {
         box-shadow: 4px 4px 1px rgb(0, 0, 0);
     }
+    .green {
+        box-shadow: 4px 4px 1px rgb(0, 100, 0);
+    }
 </style>
 <!-- component -->
 <section class="pb-12 bg-slate-800">
@@ -101,6 +104,16 @@
                      
                   </a>
                       </div>
+                      <div class="relative m-8">
+                        <button class="absolute py-1 px-3 -left-8 -top-2 -rotate-[10deg] border border-black black_border bg-[#006400] text-white font-bold">
+                         Internship
+                      </button>
+                      <a 
+                      class="green p-8 border-2 border-[#006400] inline-flex  items-center justify-start w-full font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde?
+                     
+                  </a>
+                      </div>
 
                         </div>
                         <div>
@@ -109,15 +122,15 @@
                     </div>
                     <div class="flex items-center justify-center w-full   -mx-4 lg:pl-10">
                         <div class="flex flex-col items-end px-3">
-                            <img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
+                            <img class="red_border object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
                                 src="/src/public/Screenshot 2024-05-31 232042.png"
                                 alt="">
-                            <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+                            <img class="green object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
                                 src="/src/public/Screenshot 2024-05-31 232201.png"
                                 alt="">
                         </div>
                         <div class="px-3">
-                            <img class="object-cover w-40 h-40 rounded shadow-lg sm:hbg-green-500ray-50-64 xl:h-80 sm:w-full xl:w-80"
+                            <img class="blue_border    object-cover w-40 h-40 rounded shadow-lg sm:hbg-green-500ray-50-64 xl:h-80 sm:w-full xl:w-80"
                                 src="/src/public/cabling.jpg"
                                 alt="">
                         </div>
@@ -267,12 +280,12 @@
               </style>
               <script>
                 // JavaScript for Typing Effect
-                const texts = ["Muhammad Dhafin Ramadhan", "Network Engineer,", "Pentester!"];
+                const texts = ["Muhammad Dhafin Ramadhan", "Network Engineer,",  "Web Developer,","Pentester!"];
                 const typingContainer = document.getElementById("typing-container");
                 let currentTextIndex = 0;
                 let currentText = "";
                 let isDeleting = false;
-                let typingSpeed = 54; // Adjust the typing speed (milliseconds per character)
+                let typingSpeed = 60; // Adjust the typing speed (milliseconds per character)
               
                 function type() {
                   const text = texts[currentTextIndex];
